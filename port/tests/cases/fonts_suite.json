@@ -1,0 +1,682 @@
+[
+ {
+  "name": "s_cm1",
+  "files": [
+   "port/tests/cases/fonts/cm1.tex"
+  ],
+  "args": [
+   [
+    "-ini",
+    "-interaction=batchmode",
+    "-translate-file=cp227.tcx",
+    "plain",
+    "\\dump"
+   ],
+   [
+    "-fmt=plain",
+    "-interaction=nonstopmode",
+    "cm1"
+   ]
+  ]
+ },
+ {
+  "name": "s_enc",
+  "files": [
+   "port/tests/cases/fonts/enc.tex",
+   "port/tests/cases/fonts/pfmt.ini"
+  ],
+  "args": [
+   [
+    "-ini",
+    "-interaction=batchmode",
+    "-translate-file=cp227.tcx",
+    "-etex",
+    "pfmt.ini"
+   ],
+   [
+    "-fmt=pfmt",
+    "-interaction=nonstopmode",
+    "enc"
+   ]
+  ]
+ },
+ {
+  "name": "s_maps",
+  "files": [
+   "port/tests/cases/fonts/maps.tex",
+   "port/tests/cases/fonts/pfmt.ini",
+   "port/tests/cases/fonts/cmr10e.tfm",
+   "port/tests/cases/fonts/cmr10q.tfm",
+   "port/tests/cases/fonts/cmr10s.tfm",
+   "port/tests/cases/fonts/cmr10x.tfm",
+   "port/tests/cases/fonts/cmr10y.tfm",
+   "port/tests/cases/fonts/cmr10z.tfm",
+   "port/tests/cases/fonts/djvu00.tfm",
+   "port/tests/cases/fonts/djvu01.tfm",
+   "port/tests/cases/fonts/ec-djv.tfm",
+   "port/tests/cases/fonts/ec-lmotf.tfm",
+   "port/tests/cases/fonts/ec-lmttf.tfm",
+   "port/tests/cases/fonts/myenc.enc",
+   "port/tests/cases/fonts/mymap.map",
+   "port/tests/cases/fonts/mymap2.map",
+   "port/tests/cases/fonts/myt1.tfm",
+   "port/tests/cases/fonts/myttf.tfm"
+  ],
+  "args": [
+   [
+    "-ini",
+    "-interaction=batchmode",
+    "-translate-file=cp227.tcx",
+    "-etex",
+    "pfmt.ini"
+   ],
+   [
+    "-fmt=pfmt",
+    "-interaction=nonstopmode",
+    "maps"
+   ]
+  ]
+ },
+ {
+  "name": "s_ttf",
+  "files": [
+   "port/tests/cases/fonts/ttf.tex",
+   "port/tests/cases/fonts/pfmt.ini",
+   "port/tests/cases/fonts/cmr10e.tfm",
+   "port/tests/cases/fonts/cmr10q.tfm",
+   "port/tests/cases/fonts/cmr10s.tfm",
+   "port/tests/cases/fonts/cmr10x.tfm",
+   "port/tests/cases/fonts/cmr10y.tfm",
+   "port/tests/cases/fonts/cmr10z.tfm",
+   "port/tests/cases/fonts/djvu00.tfm",
+   "port/tests/cases/fonts/djvu01.tfm",
+   "port/tests/cases/fonts/ec-djv.tfm",
+   "port/tests/cases/fonts/ec-lmotf.tfm",
+   "port/tests/cases/fonts/ec-lmttf.tfm",
+   "port/tests/cases/fonts/myenc.enc",
+   "port/tests/cases/fonts/mymap.map",
+   "port/tests/cases/fonts/mymap2.map",
+   "port/tests/cases/fonts/myt1.tfm",
+   "port/tests/cases/fonts/myttf.tfm"
+  ],
+  "args": [
+   [
+    "-ini",
+    "-interaction=batchmode",
+    "-translate-file=cp227.tcx",
+    "-etex",
+    "pfmt.ini"
+   ],
+   [
+    "-fmt=pfmt",
+    "-interaction=nonstopmode",
+    "ttf"
+   ]
+  ]
+ },
+ {
+  "name": "s_pk",
+  "files": [
+   "port/tests/cases/fonts/pk.tex",
+   "port/tests/cases/fonts/pfmt.ini"
+  ],
+  "args": [
+   [
+    "-ini",
+    "-interaction=batchmode",
+    "-translate-file=cp227.tcx",
+    "-etex",
+    "pfmt.ini"
+   ],
+   [
+    "-fmt=pfmt",
+    "-interaction=nonstopmode",
+    "pk"
+   ]
+  ]
+ },
+ {
+  "name": "s_vf",
+  "files": [
+   "port/tests/cases/fonts/vf.tex",
+   "port/tests/cases/fonts/pfmt.ini"
+  ],
+  "args": [
+   [
+    "-ini",
+    "-interaction=batchmode",
+    "-translate-file=cp227.tcx",
+    "-etex",
+    "pfmt.ini"
+   ],
+   [
+    "-fmt=pfmt",
+    "-interaction=nonstopmode",
+    "vf"
+   ]
+  ]
+ },
+ {
+  "name": "s_tu",
+  "files": [
+   "port/tests/cases/fonts/tu.tex"
+  ],
+  "args": [
+   [
+    "-ini",
+    "-interaction=batchmode",
+    "-translate-file=cp227.tcx",
+    "plain",
+    "\\dump"
+   ],
+   [
+    "-fmt=plain",
+    "-interaction=nonstopmode",
+    "tu"
+   ]
+  ]
+ },
+ {
+  "name": "s_tufmt",
+  "files": [
+   "port/tests/cases/fonts/tu2.tex",
+   "port/tests/cases/fonts/tufmt.ini"
+  ],
+  "args": [
+   [
+    "-ini",
+    "-interaction=batchmode",
+    "-translate-file=cp227.tcx",
+    "tufmt.ini"
+   ],
+   [
+    "-fmt=tufmt",
+    "-interaction=nonstopmode",
+    "tu2"
+   ]
+  ]
+ },
+ {
+  "name": "s_expand",
+  "files": [
+   "port/tests/cases/fonts/expand.tex"
+  ],
+  "args": [
+   [
+    "-ini",
+    "-interaction=batchmode",
+    "-translate-file=cp227.tcx",
+    "plain",
+    "\\dump"
+   ],
+   [
+    "-fmt=plain",
+    "-interaction=nonstopmode",
+    "expand"
+   ]
+  ]
+ },
+ {
+  "name": "s_nodef",
+  "files": [
+   "port/tests/cases/fonts/nodef.tex",
+   "port/tests/cases/fonts/pfmt.ini",
+   "port/tests/cases/fonts/mymap2.map"
+  ],
+  "args": [
+   [
+    "-ini",
+    "-interaction=batchmode",
+    "-translate-file=cp227.tcx",
+    "-etex",
+    "pfmt.ini"
+   ],
+   [
+    "-fmt=pfmt",
+    "-interaction=nonstopmode",
+    "nodef"
+   ]
+  ]
+ },
+ {
+  "name": "s_all",
+  "files": [
+   "port/tests/cases/fonts/allchars.tex",
+   "port/tests/cases/fonts/pfmt.ini",
+   "port/tests/cases/fonts/cmr10e.tfm",
+   "port/tests/cases/fonts/cmr10q.tfm",
+   "port/tests/cases/fonts/cmr10s.tfm",
+   "port/tests/cases/fonts/cmr10x.tfm",
+   "port/tests/cases/fonts/cmr10y.tfm",
+   "port/tests/cases/fonts/cmr10z.tfm",
+   "port/tests/cases/fonts/djvu00.tfm",
+   "port/tests/cases/fonts/djvu01.tfm",
+   "port/tests/cases/fonts/ec-djv.tfm",
+   "port/tests/cases/fonts/ec-lmotf.tfm",
+   "port/tests/cases/fonts/ec-lmttf.tfm",
+   "port/tests/cases/fonts/myenc.enc",
+   "port/tests/cases/fonts/mymap.map",
+   "port/tests/cases/fonts/mymap2.map",
+   "port/tests/cases/fonts/myt1.tfm",
+   "port/tests/cases/fonts/myttf.tfm"
+  ],
+  "args": [
+   [
+    "-ini",
+    "-interaction=batchmode",
+    "-translate-file=cp227.tcx",
+    "-etex",
+    "pfmt.ini"
+   ],
+   [
+    "-fmt=pfmt",
+    "-interaction=nonstopmode",
+    "allchars"
+   ]
+  ]
+ },
+ {
+  "name": "s_errs1",
+  "files": [
+   "port/tests/cases/fonts/errs1.tex",
+   "port/tests/cases/fonts/cmr10e.tfm",
+   "port/tests/cases/fonts/cmr10q.tfm",
+   "port/tests/cases/fonts/cmr10s.tfm",
+   "port/tests/cases/fonts/cmr10x.tfm",
+   "port/tests/cases/fonts/cmr10y.tfm",
+   "port/tests/cases/fonts/cmr10z.tfm",
+   "port/tests/cases/fonts/djvu00.tfm",
+   "port/tests/cases/fonts/djvu01.tfm",
+   "port/tests/cases/fonts/ec-djv.tfm",
+   "port/tests/cases/fonts/ec-lmotf.tfm",
+   "port/tests/cases/fonts/ec-lmttf.tfm",
+   "port/tests/cases/fonts/myenc.enc",
+   "port/tests/cases/fonts/mymap.map",
+   "port/tests/cases/fonts/mymap2.map",
+   "port/tests/cases/fonts/myt1.tfm",
+   "port/tests/cases/fonts/myttf.tfm"
+  ],
+  "args": [
+   [
+    "-ini",
+    "-interaction=batchmode",
+    "-translate-file=cp227.tcx",
+    "plain",
+    "\\dump"
+   ],
+   [
+    "-fmt=plain",
+    "-interaction=nonstopmode",
+    "errs1"
+   ]
+  ]
+ },
+ {
+  "name": "s_errs2",
+  "files": [
+   "port/tests/cases/fonts/errs2.tex",
+   "port/tests/cases/fonts/cmr10e.tfm",
+   "port/tests/cases/fonts/cmr10q.tfm",
+   "port/tests/cases/fonts/cmr10s.tfm",
+   "port/tests/cases/fonts/cmr10x.tfm",
+   "port/tests/cases/fonts/cmr10y.tfm",
+   "port/tests/cases/fonts/cmr10z.tfm",
+   "port/tests/cases/fonts/djvu00.tfm",
+   "port/tests/cases/fonts/djvu01.tfm",
+   "port/tests/cases/fonts/ec-djv.tfm",
+   "port/tests/cases/fonts/ec-lmotf.tfm",
+   "port/tests/cases/fonts/ec-lmttf.tfm",
+   "port/tests/cases/fonts/myenc.enc",
+   "port/tests/cases/fonts/mymap.map",
+   "port/tests/cases/fonts/mymap2.map",
+   "port/tests/cases/fonts/myt1.tfm",
+   "port/tests/cases/fonts/myttf.tfm"
+  ],
+  "args": [
+   [
+    "-ini",
+    "-interaction=batchmode",
+    "-translate-file=cp227.tcx",
+    "plain",
+    "\\dump"
+   ],
+   [
+    "-fmt=plain",
+    "-interaction=nonstopmode",
+    "errs2"
+   ]
+  ]
+ },
+ {
+  "name": "s_ttf2",
+  "files": [
+   "port/tests/cases/fonts/ttf2.tex",
+   "port/tests/cases/fonts/cmr10e.tfm",
+   "port/tests/cases/fonts/cmr10q.tfm",
+   "port/tests/cases/fonts/cmr10s.tfm",
+   "port/tests/cases/fonts/cmr10x.tfm",
+   "port/tests/cases/fonts/cmr10y.tfm",
+   "port/tests/cases/fonts/cmr10z.tfm",
+   "port/tests/cases/fonts/djvu00.tfm",
+   "port/tests/cases/fonts/djvu01.tfm",
+   "port/tests/cases/fonts/ec-djv.tfm",
+   "port/tests/cases/fonts/ec-lmotf.tfm",
+   "port/tests/cases/fonts/ec-lmttf.tfm",
+   "port/tests/cases/fonts/myenc.enc",
+   "port/tests/cases/fonts/mymap.map",
+   "port/tests/cases/fonts/mymap2.map",
+   "port/tests/cases/fonts/myt1.tfm",
+   "port/tests/cases/fonts/myttf.tfm"
+  ],
+  "args": [
+   [
+    "-ini",
+    "-interaction=batchmode",
+    "-translate-file=cp227.tcx",
+    "plain",
+    "\\dump"
+   ],
+   [
+    "-fmt=plain",
+    "-interaction=nonstopmode",
+    "ttf2"
+   ]
+  ]
+ },
+ {
+  "name": "s_allos",
+  "files": [
+   "port/tests/cases/fonts/allos.tex",
+   "port/tests/cases/fonts/pfmt.ini",
+   "port/tests/cases/fonts/cmr10e.tfm",
+   "port/tests/cases/fonts/cmr10q.tfm",
+   "port/tests/cases/fonts/cmr10s.tfm",
+   "port/tests/cases/fonts/cmr10x.tfm",
+   "port/tests/cases/fonts/cmr10y.tfm",
+   "port/tests/cases/fonts/cmr10z.tfm",
+   "port/tests/cases/fonts/djvu00.tfm",
+   "port/tests/cases/fonts/djvu01.tfm",
+   "port/tests/cases/fonts/ec-djv.tfm",
+   "port/tests/cases/fonts/ec-lmotf.tfm",
+   "port/tests/cases/fonts/ec-lmttf.tfm",
+   "port/tests/cases/fonts/myenc.enc",
+   "port/tests/cases/fonts/mymap.map",
+   "port/tests/cases/fonts/mymap2.map",
+   "port/tests/cases/fonts/myt1.tfm",
+   "port/tests/cases/fonts/myttf.tfm"
+  ],
+  "args": [
+   [
+    "-ini",
+    "-interaction=batchmode",
+    "-translate-file=cp227.tcx",
+    "-etex",
+    "pfmt.ini"
+   ],
+   [
+    "-fmt=pfmt",
+    "-interaction=nonstopmode",
+    "allos"
+   ]
+  ]
+ },
+ {
+  "name": "s_z_all",
+  "files": [
+   "port/tests/cases/fonts/z_allchars.tex",
+   "port/tests/cases/fonts/pfmt.ini",
+   "port/tests/cases/fonts/cmr10e.tfm",
+   "port/tests/cases/fonts/cmr10q.tfm",
+   "port/tests/cases/fonts/cmr10s.tfm",
+   "port/tests/cases/fonts/cmr10x.tfm",
+   "port/tests/cases/fonts/cmr10y.tfm",
+   "port/tests/cases/fonts/cmr10z.tfm",
+   "port/tests/cases/fonts/djvu00.tfm",
+   "port/tests/cases/fonts/djvu01.tfm",
+   "port/tests/cases/fonts/ec-djv.tfm",
+   "port/tests/cases/fonts/ec-lmotf.tfm",
+   "port/tests/cases/fonts/ec-lmttf.tfm",
+   "port/tests/cases/fonts/myenc.enc",
+   "port/tests/cases/fonts/mymap.map",
+   "port/tests/cases/fonts/mymap2.map",
+   "port/tests/cases/fonts/myt1.tfm",
+   "port/tests/cases/fonts/myttf.tfm"
+  ],
+  "args": [
+   [
+    "-ini",
+    "-interaction=batchmode",
+    "-translate-file=cp227.tcx",
+    "-etex",
+    "pfmt.ini"
+   ],
+   [
+    "-fmt=pfmt",
+    "-interaction=nonstopmode",
+    "z_allchars"
+   ]
+  ]
+ },
+ {
+  "name": "s_z_ttf",
+  "files": [
+   "port/tests/cases/fonts/z_ttf.tex",
+   "port/tests/cases/fonts/pfmt.ini",
+   "port/tests/cases/fonts/cmr10e.tfm",
+   "port/tests/cases/fonts/cmr10q.tfm",
+   "port/tests/cases/fonts/cmr10s.tfm",
+   "port/tests/cases/fonts/cmr10x.tfm",
+   "port/tests/cases/fonts/cmr10y.tfm",
+   "port/tests/cases/fonts/cmr10z.tfm",
+   "port/tests/cases/fonts/djvu00.tfm",
+   "port/tests/cases/fonts/djvu01.tfm",
+   "port/tests/cases/fonts/ec-djv.tfm",
+   "port/tests/cases/fonts/ec-lmotf.tfm",
+   "port/tests/cases/fonts/ec-lmttf.tfm",
+   "port/tests/cases/fonts/myenc.enc",
+   "port/tests/cases/fonts/mymap.map",
+   "port/tests/cases/fonts/mymap2.map",
+   "port/tests/cases/fonts/myt1.tfm",
+   "port/tests/cases/fonts/myttf.tfm"
+  ],
+  "args": [
+   [
+    "-ini",
+    "-interaction=batchmode",
+    "-translate-file=cp227.tcx",
+    "-etex",
+    "pfmt.ini"
+   ],
+   [
+    "-fmt=pfmt",
+    "-interaction=nonstopmode",
+    "z_ttf"
+   ]
+  ]
+ },
+ {
+  "name": "s_z_pk",
+  "files": [
+   "port/tests/cases/fonts/z_pk.tex",
+   "port/tests/cases/fonts/pfmt.ini",
+   "port/tests/cases/fonts/cmr10e.tfm",
+   "port/tests/cases/fonts/cmr10q.tfm",
+   "port/tests/cases/fonts/cmr10s.tfm",
+   "port/tests/cases/fonts/cmr10x.tfm",
+   "port/tests/cases/fonts/cmr10y.tfm",
+   "port/tests/cases/fonts/cmr10z.tfm",
+   "port/tests/cases/fonts/djvu00.tfm",
+   "port/tests/cases/fonts/djvu01.tfm",
+   "port/tests/cases/fonts/ec-djv.tfm",
+   "port/tests/cases/fonts/ec-lmotf.tfm",
+   "port/tests/cases/fonts/ec-lmttf.tfm",
+   "port/tests/cases/fonts/myenc.enc",
+   "port/tests/cases/fonts/mymap.map",
+   "port/tests/cases/fonts/mymap2.map",
+   "port/tests/cases/fonts/myt1.tfm",
+   "port/tests/cases/fonts/myttf.tfm"
+  ],
+  "args": [
+   [
+    "-ini",
+    "-interaction=batchmode",
+    "-translate-file=cp227.tcx",
+    "-etex",
+    "pfmt.ini"
+   ],
+   [
+    "-fmt=pfmt",
+    "-interaction=nonstopmode",
+    "z_pk"
+   ]
+  ]
+ },
+ {
+  "name": "s_z_maps",
+  "files": [
+   "port/tests/cases/fonts/z_maps.tex",
+   "port/tests/cases/fonts/pfmt.ini",
+   "port/tests/cases/fonts/cmr10e.tfm",
+   "port/tests/cases/fonts/cmr10q.tfm",
+   "port/tests/cases/fonts/cmr10s.tfm",
+   "port/tests/cases/fonts/cmr10x.tfm",
+   "port/tests/cases/fonts/cmr10y.tfm",
+   "port/tests/cases/fonts/cmr10z.tfm",
+   "port/tests/cases/fonts/djvu00.tfm",
+   "port/tests/cases/fonts/djvu01.tfm",
+   "port/tests/cases/fonts/ec-djv.tfm",
+   "port/tests/cases/fonts/ec-lmotf.tfm",
+   "port/tests/cases/fonts/ec-lmttf.tfm",
+   "port/tests/cases/fonts/myenc.enc",
+   "port/tests/cases/fonts/mymap.map",
+   "port/tests/cases/fonts/mymap2.map",
+   "port/tests/cases/fonts/myt1.tfm",
+   "port/tests/cases/fonts/myttf.tfm"
+  ],
+  "args": [
+   [
+    "-ini",
+    "-interaction=batchmode",
+    "-translate-file=cp227.tcx",
+    "-etex",
+    "pfmt.ini"
+   ],
+   [
+    "-fmt=pfmt",
+    "-interaction=nonstopmode",
+    "z_maps"
+   ]
+  ]
+ },
+ {
+  "name": "s_z_misc",
+  "files": [
+   "port/tests/cases/fonts/z_misc.tex",
+   "port/tests/cases/fonts/pfmt.ini",
+   "port/tests/cases/fonts/cmr10e.tfm",
+   "port/tests/cases/fonts/cmr10q.tfm",
+   "port/tests/cases/fonts/cmr10s.tfm",
+   "port/tests/cases/fonts/cmr10x.tfm",
+   "port/tests/cases/fonts/cmr10y.tfm",
+   "port/tests/cases/fonts/cmr10z.tfm",
+   "port/tests/cases/fonts/djvu00.tfm",
+   "port/tests/cases/fonts/djvu01.tfm",
+   "port/tests/cases/fonts/ec-djv.tfm",
+   "port/tests/cases/fonts/ec-lmotf.tfm",
+   "port/tests/cases/fonts/ec-lmttf.tfm",
+   "port/tests/cases/fonts/myenc.enc",
+   "port/tests/cases/fonts/mymap.map",
+   "port/tests/cases/fonts/mymap2.map",
+   "port/tests/cases/fonts/myt1.tfm",
+   "port/tests/cases/fonts/myttf.tfm"
+  ],
+  "args": [
+   [
+    "-ini",
+    "-interaction=batchmode",
+    "-translate-file=cp227.tcx",
+    "-etex",
+    "pfmt.ini"
+   ],
+   [
+    "-fmt=pfmt",
+    "-interaction=nonstopmode",
+    "z_misc"
+   ]
+  ]
+ },
+ {
+  "name": "s_z_vf",
+  "files": [
+   "port/tests/cases/fonts/z_vf.tex",
+   "port/tests/cases/fonts/pfmt.ini",
+   "port/tests/cases/fonts/cmr10e.tfm",
+   "port/tests/cases/fonts/cmr10q.tfm",
+   "port/tests/cases/fonts/cmr10s.tfm",
+   "port/tests/cases/fonts/cmr10x.tfm",
+   "port/tests/cases/fonts/cmr10y.tfm",
+   "port/tests/cases/fonts/cmr10z.tfm",
+   "port/tests/cases/fonts/djvu00.tfm",
+   "port/tests/cases/fonts/djvu01.tfm",
+   "port/tests/cases/fonts/ec-djv.tfm",
+   "port/tests/cases/fonts/ec-lmotf.tfm",
+   "port/tests/cases/fonts/ec-lmttf.tfm",
+   "port/tests/cases/fonts/myenc.enc",
+   "port/tests/cases/fonts/mymap.map",
+   "port/tests/cases/fonts/mymap2.map",
+   "port/tests/cases/fonts/myt1.tfm",
+   "port/tests/cases/fonts/myttf.tfm"
+  ],
+  "args": [
+   [
+    "-ini",
+    "-interaction=batchmode",
+    "-translate-file=cp227.tcx",
+    "-etex",
+    "pfmt.ini"
+   ],
+   [
+    "-fmt=pfmt",
+    "-interaction=nonstopmode",
+    "z_vf"
+   ]
+  ]
+ },
+ {
+  "name": "s_misc",
+  "files": [
+   "port/tests/cases/fonts/misc.tex",
+   "port/tests/cases/fonts/pfmt.ini",
+   "port/tests/cases/fonts/cmr10e.tfm",
+   "port/tests/cases/fonts/cmr10q.tfm",
+   "port/tests/cases/fonts/cmr10s.tfm",
+   "port/tests/cases/fonts/cmr10x.tfm",
+   "port/tests/cases/fonts/cmr10y.tfm",
+   "port/tests/cases/fonts/cmr10z.tfm",
+   "port/tests/cases/fonts/djvu00.tfm",
+   "port/tests/cases/fonts/djvu01.tfm",
+   "port/tests/cases/fonts/ec-djv.tfm",
+   "port/tests/cases/fonts/ec-lmotf.tfm",
+   "port/tests/cases/fonts/ec-lmttf.tfm",
+   "port/tests/cases/fonts/myenc.enc",
+   "port/tests/cases/fonts/mymap.map",
+   "port/tests/cases/fonts/mymap2.map",
+   "port/tests/cases/fonts/myt1.tfm",
+   "port/tests/cases/fonts/myttf.tfm"
+  ],
+  "args": [
+   [
+    "-ini",
+    "-interaction=batchmode",
+    "-translate-file=cp227.tcx",
+    "-etex",
+    "pfmt.ini"
+   ],
+   [
+    "-fmt=pfmt",
+    "-interaction=nonstopmode",
+    "misc"
+   ]
+  ]
+ }
+]

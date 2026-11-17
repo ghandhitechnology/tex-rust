@@ -1,0 +1,23 @@
+[package]
+name = "texrs-posix-regex"
+version = "0.1.0"
+edition = "2021"
+description = "Pure-Rust port of the glibc 2.5 POSIX regex engine bundled with pdfTeX (TeX Live 2026), as used by the pdfmatch primitive"
+license = "LGPL-2.1-or-later"
+publish = false
+
+[lib]
+name = "texrs_posix_regex"
+path = "src/lib.rs"
+
+[dependencies]
+
+[dev-dependencies]
+
+[profile.release]
+opt-level = 3
+codegen-units = 1
+debug = 1
+
+[profile.test]
+opt-level = 3

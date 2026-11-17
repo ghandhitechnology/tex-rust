@@ -1,0 +1,31 @@
+\pdfoutput=1 \pdfcompresslevel=0 \pdfobjcompresslevel=0
+\pdfinfo{/Title (Rules only) /Author (texrs test)}
+\pdfcatalog{/PageMode /UseOutlines}
+\hsize=4in \vsize=6in \parindent=0pt
+\def\r#1{\vrule width #1pt height 10pt depth 2pt\hskip 3pt}
+\pdfdest name {top} xyz
+\pdfoutline goto name {top} count 1 {First}
+\pdfoutline goto name {top} {Child}
+\hbox{\r1\r2\r3\r4}
+\pdfliteral{0 0 1 rg}
+\hbox{\r5\r6}
+\pdfliteral{0 g}
+\setbox0\hbox{\r7\r8}
+\pdfxform 0
+\hbox{\pdfrefxform\pdflastxform \hskip 10pt \pdfrefxform\pdflastxform}
+\immediate\pdfobj{<< /Test 42 /Arr [1 2 3] /Str (paren \string\( ) >>}
+\pdfannot width 20pt height 10pt depth 0pt {/Subtype /Text /Contents (note)}
+\hbox{\pdfstartlink user {/Subtype /Link /A << /S /URI /URI (https://example.org) >>}\r9\pdfendlink}
+\pdfsave \pdfsetmatrix{1 0.5 0 1}\hbox{\r3}\pdfrestore
+\pdfcolorstackinit page direct {0 g 0 G}
+\hbox{\pdfcolorstack 0 push {1 0 0 rg}\r4\pdfcolorstack 0 pop}
+\message{[\pdfstrcmp{abc}{abd}][\pdfmdfivesum{hello}][\pdfescapestring{a(b)}][\pdfescapename{a b}][\pdfescapehex{AB}][\pdfunescapehex{414243}]}
+\message{[\pdfcreationdate][\pdfelapsedtime>0][\pdffilesize{pdfnofont.tex}][\pdffilemoddate{pdfnofont.tex}]}
+\message{[\pdffiledump offset 0 length 8 {pdfnofont.tex}][\pdfmdfivesum file {pdfnofont.tex}]}
+\pdfthread num 1 \hbox{\r2}
+\pdfsnapy 1pt
+\vfill\eject
+\hbox{\r10}
+\pdfpageattr{/Rotate 90}
+\pdfpagesattr{/CropBox [0 0 300 400]}
+\end

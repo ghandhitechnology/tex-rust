@@ -1,0 +1,5 @@
+\openin1=nul: \ifeof1 \message{[openin nul: eof]}\else\message{[openin nul: open]}\fi \closein1
+\openin1=nul \ifeof1 \message{[openin nul eof]}\else\message{[openin nul open]}\fi \closein1
+\message{[size:\pdffilesize{nul:}][date:\pdffilemoddate{nul:}][md5:\pdfmdfivesum file{nul:}]}
+\immediate\openout2=nul: \immediate\write2{x}\immediate\closeout2
+\bye

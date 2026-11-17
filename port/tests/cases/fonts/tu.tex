@@ -1,0 +1,10 @@
+\pdfoutput=1 \pdfcompresslevel=0 \pdfobjcompresslevel=0
+\input glyphtounicode
+\pdfgentounicode=1
+\pdfglyphtounicode{tfm:cmr10/A}{0041 0301}
+\pdfglyphtounicode{ff}{0066 0066}
+\pdfglyphtounicode{bogus}{xyz}
+\pdfglyphtounicode{toolarge}{110000}
+\font\lm=ec-lmr10 \font\lmn=ec-lmr12 \pdfnobuiltintounicode\lmn
+Text with ff fi \AE\ A. $\alpha\le\beta$ \lm \"A\ss{} ``q'' f\_i. \lmn no tounicode
+\bye

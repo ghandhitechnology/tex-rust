@@ -1,0 +1,16 @@
+% PDF mode: forms shipped before the first page, \synctex=0 around a form
+\pdfoutput=1 \pdfcompresslevel=0 \pdfobjcompresslevel=0 \parindent=0pt \nopagenumbers
+\setbox0\hbox{\vrule width 4pt height 4pt}
+\immediate\pdfxform0
+\setbox0\vbox{\hrule width 6pt\kern 2pt\hbox{\pdfrefxform\pdflastxform}}
+\immediate\pdfxform0
+\noindent\pdfrefxform\pdflastxform\hskip 3pt\vrule width 2pt\par
+\synctex=0
+\setbox0\hbox{\vrule width 1pt\hskip 1pt\vrule}\immediate\pdfxform0
+\synctex=1
+\noindent\pdfrefxform\pdflastxform\par
+\setbox0\hbox{\kern 1pt\vrule width 1pt}\immediate\pdfxform0
+\noindent\pdfrefxform\pdflastxform\par
+\eject
+\noindent\vrule\par
+\bye

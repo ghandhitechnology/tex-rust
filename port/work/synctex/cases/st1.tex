@@ -1,0 +1,17 @@
+\hsize=4in \vsize=3in
+This is a paragraph of text with some words. It should break into several lines
+so that we can see glue and kerns: AVAWAY. Some more text for the line breaking.
+
+\hbox{A box \vrule width 1pt height 5pt \kern 3pt with kern}
+\vbox{\hbox{inner}\hbox{}\vbox{}\hrule height 2pt}
+$a+b=\sqrt{x}$ and $$\int_0^1 f(x)\,dx$$
+\input st1b
+\noindent\hfil\break
+\vbox to 1in{\vfil\hbox{x}}
+\penalty-10000
+Page two text. \kern 5pt \hskip 3pt plus 1fil x\hskip-3pt y\kern-2pt z
+\moveleft 1in\hbox{moved}\moveright 2in\vbox{\hbox{r}}
+\eject
+Third page \vrule\ $x^2\over y$ \leaders\hrule\hfil\par
+\setbox0\hbox{saved}\copy0 \box0 \raise2pt\hbox{up}\lower3pt\hbox{down}
+\bye

@@ -1,0 +1,41 @@
+[package]
+name = "texrs-pdftex"
+version = "0.1.0"
+edition = "2021"
+description = "pdfTeX 1.40.29 (TeX Live 2026) ported to Rust: no C dependencies"
+license = "GPL-2.0-or-later"
+publish = false
+
+[[bin]]
+name = "pdftex"
+path = "src/main.rs"
+
+[features]
+prof = []
+# PGO training builds: leave through the C runtime exit() so LLVM writes its profile
+crt-exit = []
+
+[dependencies]
+texrs-zlib = { path = "../crates/zlib" }
+texrs-kpathsea = { path = "../crates/kpathsea" }
+texrs-pdfread = { path = "../crates/pdfread" }
+texrs-posix-regex = { path = "../crates/regex" }
+
+[profile.dev]
+overflow-checks = false
+opt-level = 0
+
+[profile.release]
+overflow-checks = false
+debug = 1
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+
+# release speed with debug assertions: runs the cross-checks of the fast paths against
+# the generated routines (TEXRS_PROFILE=verify with the test harness)
+[profile.verify]
+inherits = "release"
+debug-assertions = true
+lto = "thin"
+codegen-units = 16

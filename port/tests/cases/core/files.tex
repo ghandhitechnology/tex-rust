@@ -1,0 +1,16 @@
+\immediate\openout3=written.tex
+\immediate\write3{\relax line one}
+\immediate\write3{line two \the\count0}
+\immediate\closeout3
+\openin5=written.tex
+\read5 to\a \show\a
+\ifeof5 \message{eof}\else\message{not eof}\fi
+\read5 to\b \show\b
+\closein5
+\openin6=nonexistent \ifeof6 \message{missing ok}\fi
+\input written
+\write-1{to log only}\write16{to terminal}
+\message{\jobname}
+\openout4=late \write4{deferred} \closeout4
+Text\par
+\bye

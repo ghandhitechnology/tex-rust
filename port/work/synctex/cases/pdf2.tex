@@ -1,0 +1,21 @@
+% PDF mode without glyphs: rules, boxes, glue, kerns, math nodes, forms, \input
+\pdfoutput=1 \pdfcompresslevel=0 \pdfobjcompresslevel=0 \nopagenumbers
+\hsize=3in \vsize=4in \parindent=0pt
+\setbox1=\hbox{\vrule width 10pt height 5pt depth 1pt\kern 2pt\vrule width 3pt}
+\immediate\pdfxform 1
+\edef\formA{\the\pdflastxform}
+\setbox2=\vbox{\hrule width 20pt height 2pt\vskip 3pt\hbox{\pdfrefxform\formA\hskip 2pt\vrule}}
+\pdfxform 2
+\edef\formB{\the\pdflastxform}
+\noindent\vrule width 1in height 4pt\hskip 3pt plus 1pt\vrule width 2pt\kern 4pt\vrule\par
+\noindent\pdfrefxform\formA\hskip 1pt\pdfrefxform\formB\par
+\hbox{\vbox{\hrule width 5pt}\hbox{}\vbox{}\kern 3pt\vrule}
+\noindent$\kern 2pt\vrule width 3pt$\hskip 2pt$\hskip 1pt$\par
+\input pdf2b
+\moveright 1in\vbox{\hrule width 1pt}
+\eject
+\noindent\pdfrefxform\formB\kern 1pt\vrule\par
+\leaders\hrule\vskip 10pt
+\noindent\leaders\vrule\hskip 20pt\par
+\noindent\raise 3pt\hbox{\vrule width 2pt}\lower 2pt\vbox{\hrule width 4pt}\par
+\bye

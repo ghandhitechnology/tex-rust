@@ -1,0 +1,4 @@
+\immediate\write18{echo shell-ran > fromshell.txt}
+\input|"echo \string\message{from pipe}"
+\message{shell=\the\pdfshellescape}
+\bye

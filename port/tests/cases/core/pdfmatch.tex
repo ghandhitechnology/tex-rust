@@ -1,0 +1,100 @@
+% \pdfmatch / \pdflastmatch: POSIX ERE features, flags, sub-match counts, compile errors
+\catcode0=12 % NUL bytes reach \pdfmatch
+\def\L{\pdflastmatch0;\pdflastmatch1;\pdflastmatch2;\pdflastmatch3;\pdflastmatch4}
+\def\T#1#2{\message{[#1 / #2 => \pdfmatch{#1}{#2} : \L]}}
+\def\I#1#2{\message{[icase #1 / #2 => \pdfmatch icase{#1}{#2} : \L]}}
+\def\S#1#2#3{\message{[sub#1 #2 / #3 => \pdfmatch subcount #1 {#2}{#3} : \L]}}
+\def\SI#1#2#3{\message{[isub#1 #2 / #3 => \pdfmatch icase subcount #1 {#2}{#3} : \L]}}
+\message{[before any match: \L;\pdflastmatch-1;\pdflastmatch99]}
+\T{ab}{xxabyy}
+\T{a|b}{cb}
+\T{(a)(b)?(c)}{ac}
+\T{(a)|b}{b}
+\T{^abc$}{abc}
+\T{^abc$}{abcd}
+\T{[[:digit:]]+}{ab123c}
+\T{[^a-c]+}{abcdef}
+\T{(a*)+}{aaa}
+\T{(a*)*}{b}
+\T{(a|ab)(c|bcd)(d*)}{abcd}
+\T{(a+|b+)*c}{aabbc}
+\T{x{2,3}}{xxxxx}
+\T{x{2,}y}{xxxxy}
+\T{a{,2}b}{aaab}
+\T{(wee|week)(knights|night)}{weeknights}
+\T{x*}{abc}
+\T{}{abc}
+\T{a.c}{a^^Jc}
+\T{b}{a^^@b}
+\T{a}{^^@a}
+\T{[[:alpha:]]+}{12über34}
+\T{[[:upper:]][[:lower:]]+}{xxHello}
+\T{[[:space:]]+}{a^^I b}
+\T{[[:punct:]]+}{ab;:!c}
+\T{[[:xdigit:]]+}{zzBEEFzz}
+\T{[]a]+}{x]a]y}
+\T{[a-]+}{x-a-y}
+\T{[[.a.]]+}{baab}
+\T{[[=e=]]+}{feed}
+\I{ABC}{xabcx}
+\I{[a-c]+}{xBCAx}
+\I{(Hello) (World)}{hello WORLD}
+\S{0}{(a)(b)}{ab}
+\S{1}{(a)(b)}{ab}
+\S{2}{(a)(b)}{ab}
+\S{20}{(a)(b)(c)(d)(e)}{abcde}
+\SI{3}{(X)(Y)}{xy}
+\message{[after match: \pdflastmatch-1;\pdflastmatch2;\pdflastmatch9;\pdflastmatch10;\pdflastmatch2000]}
+\T{(ab}{ab}
+\message{[state kept after compile error: \L]}
+\T{ab)}{ab)}
+\T{a{2,1}}{aa}
+\T{[z-a]}{a}
+\T{[[:foo:]]}{a}
+\T{[abc}{a}
+\T{a{99999}}{a}
+\T{a{1}{2}}{aa}
+\T{*a}{*a}
+\T{a**}{aaa}
+\T{a+?}{aaa}
+\T{()}{x}
+\T{(|a)b}{ab}
+\T{a{1}}{aa}
+\T{x{0}y}{xy}
+% bytes >= 128 and a long subject
+\T{(ü+)(ß)}{aüüßb}
+\def\long{abababababababababababababababababababababababababababababababababababababab}
+\T{(ab)+c}{\long\long\long c}
+\T{(a|b)*abc}{\long\long\long abc}
+% backslash patterns: | becomes the escape character
+\catcode`\|=0 \catcode`\\=12
+|T{(.)\1}{abccd}
+|T{(a+)b\1}{aabaa}
+|T{\(a\)}{(a)}
+|T{a\.b}{axb a.b}
+|T{\<foo\>}{xfoo foo}
+|T{\bbar\b}{xbar bar}
+|T{\w+}{  word_9 }
+|T{\W+}{ab;; cd}
+|T{\sx\S}{a xy}
+|T{a\{2\}}{a{2}}
+|T{\`ab}{ab}
+|T{ab\'}{ab}
+|T{\}{x}
+|T{(a)\2}{aa}
+|I{(a)\1}{aA}
+|catcode`|\=0 \catcode`\|=12
+% special characters as other: # $ & ~ ^ _ { } through a group with [ ] as braces
+\begingroup
+\catcode`\[=1 \catcode`\]=2 \catcode`\{=12 \catcode`\}=12 \catcode`\#=12 \catcode`\$=12
+\catcode`\&=12 \catcode`\~=12 \catcode`\^=12 \catcode`\_=12
+\T[x{2}][axxb]
+\T[{][a{b]
+\T[^a.$][abc]
+\T[#+][a##b]
+\T[&~_][x&~_y]
+\T[^^][^^]
+\endgroup
+\pdfmatch{(a)(b)}{ab}
+\message{[final: \L]}
+\bye

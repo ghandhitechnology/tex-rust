@@ -1,0 +1,17 @@
+\pdfsetrandomseed 12345
+\message{[\the\pdfrandomseed][\pdfuniformdeviate 1000][\pdfuniformdeviate -50][\pdfnormaldeviate][\pdfnormaldeviate]}
+\message{[\pdfstrcmp{b}{a}][\pdfstrcmp{}{}][\pdfescapestring{^^00^^ff\string\\}][\pdfescapename{#()/<>[]{}%}]}
+\message{[\pdfescapehex{^^00^^7f}][\pdfunescapehex{4G1a}][\pdfmdfivesum{}][\the\pdftexversion][\pdftexrevision]}
+\message{[\pdftexbanner]}
+\message{[\expanded{\noexpand\relax\pdfstrcmp{x}{y}}][\ifincsname no\else yes\fi][\csname a\ifincsname b\fi\endcsname]}
+\message{[\ifpdfprimitive\relax yes\else no\fi][\pdfprimitive\relax][\ifpdfabsnum -5=5 eq\fi][\ifpdfabsdim -1pt=1pt eq\fi]}
+\message{[\the\pdfshellescape][\pdfmatch{b+}{abbbc}][\pdflastmatch0][\pdfmatch icase{X}{axb}]}
+\message{[\ifnum\pdfelapsedtime>-1 ok\fi][\pdfresettimer\ifnum\pdfelapsedtime<65536 ok\fi][\the\pdflastxpos][\the\pdfdraftmode]}
+\message{[\the\numexpr 7*8/3\relax][\the\dimexpr 1pt*3/4\relax][\the\glueexpr 1pt plus 2fil*2\relax][\the\muexpr 3mu\relax]}
+\message{[\detokenize{\a #}][\unexpanded{\b}][\the\lastlinefit][\the\eTeXversion\eTeXrevision]}
+\message{[\showtokens{a}][\the\currentgrouplevel][\the\currentiftype][\the\interactionmode]}
+\interactionmode=1 \message{[\the\interactionmode]}
+\protected\def\p{prot}\edef\q{\p}\show\q
+\tracingassigns=1 \tracingonline=1 \count5=3 \count5=3 \def\x{y}\let\y\x
+\middle \pdfsavepos \quitvmode
+\bye

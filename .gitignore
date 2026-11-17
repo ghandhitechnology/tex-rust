@@ -1,0 +1,59 @@
+# Whitelist: the repository holds the port, its tests and the benchmark corpus. The rest
+# of a working tree stays local: TeX Live 2026 in tools/texlive/2026, reference sources in
+# refs/, build output and test run directories.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/LICENSE
+!/LICENSE-GPL-3.0
+!/NOTICE.md
+!/bench/
+!/port/
+
+/bench/*
+!/bench/corpus/
+/bench/corpus/.*
+!/bench/gen_corpus.py
+!/bench/results/
+/bench/results/*
+!/bench/results/port-final.md
+!/bench/results/port-final.json
+!/bench/setup/
+/bench/setup/*
+!/bench/setup/texlive.profile.template
+
+/port/*
+!/port/ARCHITECTURE.md
+!/port/REPORT.md
+!/port/crates/
+!/port/engine/
+!/port/tests/
+!/port/tools/
+!/port/web/
+!/port/work/
+
+/port/work/*
+!/port/work/images/
+!/port/work/synctex/
+/port/work/images/*
+!/port/work/images/README.md
+!/port/work/images/tools/
+!/port/work/images/cases/
+/port/work/images/cases/gen/
+/port/work/synctex/*
+!/port/work/synctex/tools/
+!/port/work/synctex/cases/
+# written by work/synctex/tools/gen_st8.py: they \input files by this checkout's absolute path
+/port/work/synctex/cases/st8.tex
+/port/work/synctex/cases/가나.tex
+
+# build output and caches
+target/
+target-*/
+__pycache__/
+*.pyc
+
+# one-off scripts that patched sources during development
+/port/tools/patch_*.py
+/port/tools/fix_nul.py

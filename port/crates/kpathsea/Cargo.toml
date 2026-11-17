@@ -1,0 +1,24 @@
+[package]
+name = "texrs-kpathsea"
+version = "0.1.0"
+edition = "2021"
+description = "Pure-Rust port of kpathsea 6.4.2 (TeX Live 2026) path searching, no C dependencies"
+license = "LGPL-2.1-or-later"
+publish = false
+
+[lib]
+name = "texrs_kpathsea"
+path = "src/lib.rs"
+
+[[bin]]
+name = "rkpsewhich"
+path = "src/bin/rkpsewhich.rs"
+
+[dependencies]
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+debug = 0

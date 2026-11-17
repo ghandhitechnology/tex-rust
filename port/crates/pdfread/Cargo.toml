@@ -1,0 +1,21 @@
+[package]
+name = "texrs-pdfread"
+version = "0.1.0"
+edition = "2021"
+description = "Pure-Rust port of the xpdf 4.06 subset that pdfTeX (pdftoepdf.cc) uses to include PDF files"
+license = "GPL-2.0-only OR GPL-3.0-only"
+publish = false
+
+[lib]
+name = "pdfread"
+path = "src/lib.rs"
+
+[dependencies]
+
+[profile.dev]
+overflow-checks = false
+opt-level = 1
+
+[profile.release]
+overflow-checks = false
+debug = 1

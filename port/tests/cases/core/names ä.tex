@@ -1,0 +1,5 @@
+\input "my file"
+\input tëst
+\openin1="my file.tex" \ifeof1 \message{missing}lse\message{found}i
+\immediate\openout2="out file.txt" \immediate\write2{x}\immediate\closeout2
+\message{\jobname}ye

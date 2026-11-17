@@ -1,0 +1,43 @@
+# TeX Live 2026 install profile used for the parity tests and benchmarks (portable install,
+# no PATH or registry changes). Replace REPO with the absolute path of this checkout
+# (forward slashes), save as texlive.profile, then run
+#   install-tl-windows.bat -no-gui -profile texlive.profile
+selected_scheme scheme-custom
+TEXDIR REPO/tools/texlive/2026
+TEXMFLOCAL REPO/tools/texlive/texmf-local
+TEXMFSYSCONFIG REPO/tools/texlive/2026/texmf-config
+TEXMFSYSVAR REPO/tools/texlive/2026/texmf-var
+TEXMFHOME REPO/tools/texlive/texmf-local
+TEXMFCONFIG REPO/tools/texlive/2026/texmf-config
+TEXMFVAR REPO/tools/texlive/2026/texmf-var
+binary_windows 1
+collection-basic 1
+collection-latex 1
+collection-latexrecommended 1
+collection-latexextra 1
+collection-fontsrecommended 1
+collection-fontutils 1
+collection-xetex 1
+collection-luatex 1
+collection-context 1
+collection-pictures 1
+collection-bibtexextra 1
+collection-binextra 1
+collection-mathscience 1
+collection-metapost 1
+collection-plaingeneric 1
+collection-langenglish 1
+instopt_adjustpath 0
+instopt_adjustrepo 1
+instopt_letter 0
+instopt_portable 1
+instopt_write18_restricted 1
+tlpdbopt_autobackup 0
+tlpdbopt_create_formats 1
+tlpdbopt_desktop_integration 0
+tlpdbopt_file_assocs 0
+tlpdbopt_generate_updmap 0
+tlpdbopt_install_docfiles 0
+tlpdbopt_install_srcfiles 0
+tlpdbopt_post_code 1
+tlpdbopt_w32_multi_user 0

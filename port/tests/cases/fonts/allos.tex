@@ -1,0 +1,8 @@
+\pdfcompresslevel=0 \pdfobjcompresslevel=2
+\input glyphtounicode \pdfgentounicode=1
+\pdfmapline{+ec-djv DejaVuSans <lm-ec.enc <DejaVuSans.ttf}
+\font\lm=ec-lmr10 \font\ptm=ptmr8r \font\dj=ec-djv \font\mi=cmmi10 \font\sy=cmsy10
+\font\ex=cmex10 \font\msb=msbm10 \font\tt=cmtt10 \font\lmb=ec-lmbx10 \font\phv=phvb8r
+\def\all#1{\count255=0 \loop #1\char\count255 \advance\count255 by 1 \ifnum\count255<256 \repeat\par}
+\all\tenrm \all\lm \all\ptm \all\dj \all\mi \all\sy \all\ex \all\msb \all\tt \all\lmb \all\phv
+\bye

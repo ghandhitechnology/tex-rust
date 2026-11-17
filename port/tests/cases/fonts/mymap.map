@@ -1,0 +1,12 @@
+% test map file
+cmr10q CMR10 <cmr10.pfb
+cmr10z CMR10 "3 SlantFont" <cmr10.pfb
+cmr10y	CMR10 ".2 FooBar .1 SlantFont" <cmr10.pfb
+cmr10w CMR10 ".2 SlantFont <cmr10.pfb
+cmr10v CMR10 PidEid=3,1 <cmr10.pfb
+cmr10u CMR10 cmr10.pfb
+cmr10t
+# other comment
+
+cmr10q CMR10 <cmr10.pfb
+ptmr8r Times-Roman 34 <8r.enc

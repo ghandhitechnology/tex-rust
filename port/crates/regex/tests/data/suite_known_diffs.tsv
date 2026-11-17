@@ -1,0 +1,17 @@
+# Suite cases where the glibc-2.5 engine (as in pdfTeX) disagrees with the
+# suite's expectation.  Columns: id, port result (must match exactly), reason.
+# "pdfTeX:" = confirmed by running the case through pdftex.exe (\pdfmatch,
+# see tests/data/oracle_*.tsv); "C:" = confirmed with the same C sources
+# compiled by MSVC (tools/c_oracle).
+rxspencer:540	ABORT:NullState { site: "mctx->state_log[*pidx]->nodes" }	pdfTeX: crashes (NULL state dereference in proceed_next_node); suite written for later glibc which returns no match
+att-basic:140	MATCH:0,0;-1,-1	pdfTeX: (^)* on "-" leaves group 1 unset; AT&T expects (0,0)
+att-nullsubexpr:50	MATCH:0,3;0,3	pdfTeX: POSIX ERE has no minimal (*?) operator; "a*?" is (a*)? and matches greedily; AT&T line assumes minimal matching
+att-nullsubexpr:51	MATCH:0,3;2,3	pdfTeX: same as att-nullsubexpr:50
+att-nullsubexpr:52	MATCH:0,3;0,3	pdfTeX: same as att-nullsubexpr:50
+att-nullsubexpr:59:bre	ABORT:StepLimit	C: set_regs back-tracks forever (pdfTeX hangs on the ERE form (a*)*(x)(\1) against "ax")
+att-nullsubexpr:62:bre	ABORT:StepLimit	C: same endless back-tracking as att-nullsubexpr:59:bre
+att-repetition:45	MATCH:0,3;2,3;0,2;2,3	pdfTeX: glibc keeps the stale (..) submatch from an earlier iteration; AT&T expects it unset
+att-repetition:49	MATCH:0,3;2,3;0,2;2,3	pdfTeX: as att-repetition:45
+att-repetition:58	MATCH:0,4;3,4;0,2;3,4	pdfTeX: as att-repetition:45
+att-repetition:69	MATCH:0,5;4,5;2,4;4,5	pdfTeX: as att-repetition:45
+att-repetition:72	MATCH:0,5;4,5;2,4;4,5	pdfTeX: as att-repetition:45

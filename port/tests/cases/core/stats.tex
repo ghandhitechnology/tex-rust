@@ -1,0 +1,8 @@
+\tracingonline1 \tracingparagraphs1 \tracingpages1 \tracingmacros2 \tracingcommands3
+\tracingrestores1 \tracinggroups1 \tracingifs1 \tracingscantokens1 \tracingnesting2 \tracingassigns1
+\hsize=2in \def\a#1{[#1]}\a{x}
+\begingroup \count0=5 \endgroup
+Some text to break into lines because tracing paragraphs is on and more words follow here.\par
+\showgroups \showtokens{abc} \showifs
+\scantokens{\message{scanned}}
+\bye

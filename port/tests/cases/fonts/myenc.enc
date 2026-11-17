@@ -1,0 +1,5 @@
+% my test encoding
+/MyEnc [
+/uni0041 /uni00E9 /index36 /uniFFFF /nosuchglyph /index99999 /A /B % comment
+/uni0042 /u1F600 /.notdef /space
+] def

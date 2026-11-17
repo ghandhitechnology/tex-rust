@@ -1,0 +1,24 @@
+[package]
+name = "texrs-zlib"
+version = "0.1.0"
+edition = "2021"
+description = "Pure-Rust port of zlib 1.3.2 (as bundled with TeX Live 2026), byte-identical output"
+license = "Zlib"
+publish = false
+
+[lib]
+name = "texrs_zlib"
+path = "src/lib.rs"
+
+[dependencies]
+
+[dev-dependencies]
+
+[profile.release]
+opt-level = 3
+codegen-units = 1
+lto = "fat"
+debug = 1
+
+[profile.test]
+opt-level = 3

@@ -1,0 +1,9 @@
+\immediate\openout1=\jobname.aux
+\immediate\write1{\noexpand\def\noexpand\fromaux{read back}}
+\immediate\closeout1
+\input \jobname.aux
+\message{[\fromaux]}
+\openin3=\jobname.aux \ifeof3 \message{no aux}\else\message{aux visible}\fi \closein3
+\message{[\pdffilesize{\jobname.aux}]}
+Some text.\par
+\bye

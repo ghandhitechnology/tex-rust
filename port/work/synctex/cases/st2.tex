@@ -1,0 +1,18 @@
+% \synctex toggling, repeated \input, kpathsea-found input
+\hsize=3in \parindent=10pt
+First page: \hbox{box} text\kern3pt more text.\par
+\input st2b
+\input st2b
+\eject
+\synctex=0
+Second page while synctex is zero \hbox{x}\vrule\ text.
+\input st2b
+\eject
+\synctex=1
+Third page again \hbox{y} $a^2$ text.
+\input story
+\synctex=0
+\input st2b
+\synctex=1
+\hbox{}\vbox{}\par
+\bye
